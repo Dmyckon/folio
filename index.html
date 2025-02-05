@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-black">
+
+  <nav class="sticky top-5 md:static md:ms-[34%] md:mt-5">
+    <div class="justify-center flex hover:bg-violet-500 text-white bg-[#292828cb] w-[57vw] p-2 ms-20 mt-2 rounded-lg text-2xl md:w-[21vw] md:text-2xl md:justify-start md:ps-5 md:p-3 xl:w-[20vw]">
+      <ul><i class="fa fa-home"></i></ul>
+      <ul><i class="fa fa-folder ms-8 md:ms-10"></i></ul>
+      <ul><i class="fa fa-wrench ms-8 md:ms-10"></i></ul>
+      <ul><i class="fa fa-envelope ms-8 md:ms-10"></i></ul>
+    </div>
+  </nav>
+  <section class="md:flex md:m-[70px]">
+    <section>
+    <div class="bg-gray-200 rounded-2xl w-[85vw] justify-item-center text-center ms-7 mt-7 p-5 md:w-[30vw] md:sticky top-10">
+      <img src="./michael.JPG" class="w-[60vw] h-[40vh] rounded-2xl ms-7 md:w-[22vw] md:h-[60vh]">
+      <h1 class="text-3xl font-bold mt-5 md:text-5xl">Michael Olatunbosun</h1>
+      <p class="text-lg mt-5 text-gray-500 font-bold md:text-2xl md:mt-10">Front End Web Developer</p>
+      <span class="flex justify-item-center ms-20 text-2xl mt-10 md:ms-[18%] md:p-8">
+        <ul><i class="fa fa-instagram hover:text-pink-800"></i></ul>
+        <ul><i class="fa fa-twitter ms-3 hover:text-blue-400 md:ms-5"></i></ul>
+        <ul><i class="fa fa-envelope ms-3 hover:text-red-900 md:ms-5"></i></ul>
+        <ul><i class="fa fa-github ms-3 hover:text-violet-500 md:ms-5"></i></ul>
+      </span>
+    </div>
+    </section>
+    <section>
+      <div class="text-center mt-8 p-4 md:ms-10">
+        <h1 class="text-5xl text-white font-bold font-mono md:text-7xl">FRONT END</h1>
+        <span class="text-violet-500 font-bold font-sans text-4xl md:hidden">WEB DEVELOPER</span>
+        <h1 class="hidden md:block md:text-violet-500 md:font-bold md:font-sans md:text-6xl">WEB DEVELOPER</h1>
+        <p class="text-lg text-gray-300 pt-5">I'm passionate to create functional and aesthetically pleasing Web Applications which engage user experiences. I've always been eager to learn and would love to work in an environment where there is a collaborative effort for career and organization growth. In other word, I specialize in transmiting ideas into beautiful crafted products/masterpiece</p>
+      </div>
+      <div class="text-center mt-8 md:mt-16">
+        <span class="text-white text-4xl font-bold font-mono md:text-6xl">PROJECTS AND</span>
+        <span class="text-4xl text-violet-500 font-bold md:hidden">ACHIEVEMENTS</span>
+        <h1 class="hidden md:block md:text-6xl md:text-violet-500 md:font-bold">ACHIEVEMENTS</h1>
+        <div class="text-white md:grid grid-cols-2 md:ms-10">
+          <div class="flex m-10 justify-between md:block md:m-5">
+            <img src="./active-states.jpg" class="w-[30vw] rounded-2xl md:w-[50vw]">
+            <h1 class="font-bold text-2xl text-gray-300 ms-5 mt-5 md:text-3xl">Product lists with cart</h1>
+          </div>
+          <div class="flex m-10 justify-between md:block md:m-5">
+            <img src="./desktop-design.jpg" class="w-[30vw] h-[15vh] rounded-2xl md:w-[50vw] md:h-[40vh] xl:h-[50vh]">
+            <h1 class="font-bold text-2xl text-gray-300 ms-5 mt-3 md:text-3xl">Testimonial grid section</h1>
+          </div>
+          <div class="flex m-10 justify-between md:block md:m-5">
+            <img src="./desktop-preview 2.jpg" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
+            <h1 class="font-bold text-2xl text-gray-300 ms-5 mt-3 md:text-3xl">Sunnyside landing page</h1>
+          </div>
+          <div class="flex m-10 justify-between md:block md:m-5">
+            <img src="./desktop-preview.jpg" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
+            <h1 class="font-bold text-2xl text-gray-300 ms-5 mt-3 md:text-3xl">Insure landing page</h1>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8 p-4">
+        <span class="text-white text-4xl font-bold font-mono md:text-6xl">ESSENTIAL TOOLS</span>
+        <span class="text-4xl text-violet-500 font-bold md:hidden">AND SKILLS</span>
+        <h1 class="hidden md:block md:text-6xl md:text-violet-500 md:font-bold">AND SKILLS</h1>
+        <div class="text-white grid grid-cols-2 m-4 justify-item-center md:grid-cols-3 md:m-20">
+          <div>
+            <img src="./html-5.png" class="bg-white rounded-3xl w-[30vw] m-3 md:m-4 md:w-[65%]">
+            <h1 class="text-gray-300 text-xl font-bold font-mono md:mr-5">HTML</h1>
+          </div>
+          <div>
+            <img src="./css-3 (1).png" class="bg-white rounded-3xl w-[30vw] m-3 md:m-4 md:w-[65%]">
+            <h1 class="text-gray-300 text-xl font-bold font-mono md:mr-5">CSS</h1>
+          </div>
+          <div>
+            <img src="./js.png" class="bg-white rounded-3xl w-[30vw]  m-3 md:m-4 md:w-[65%]">
+            <h1 class="text-gray-300 text-xl font-bold font-mono md:mr-5">JAVASCRIPT</h1>
+          </div>
+          <div>
+            <img src="./tailwind-css.svg" class="rounded-3xl w-[30vw] bg-white m-3 mt-10 md:m-4 md:w-[65%] md:mt-10">
+            <h1 class="text-gray-300 text-xl font-bold font-mono mt-7 md:mt-12 md:mr-5">TAILWIND</h1>
+          </div>
+          <div>
+            <img src="./bootstrap.png" class="bg-white rounded-3xl w-[30vw]  m-3 md:m-4 md:w-[65%]">
+            <h1 class="text-gray-300 text-xl font-bold font-mono md:mr-5">BOOTSTRAP</h1>
+          </div>
+          <div>
+            <img src="./react.png" class="rounded-3xl w-[30vw]  m-3 md:m-4 md:w-[65%]">
+            <h1 class="text-gray-300 text-xl font-bold font-mono md:mr-5">REACT</h1>
+          </div>
+          <div>
+            <img src="./github.png" class="rounded-3xl w-[30vw]  m-3 md:m-4 md:w-[65%]">
+            <h1 class="text-gray-300 text-xl font-bold font-mono md:mr-5">GIT</h1>
+          </div>
+        </div>
+      </div>
+    <div class="text-center mt-3 p-4">
+      <h1 class="text-white text-4xl font-bold font-mono md:text-5xl">LET'S TALK</h1>
+      <span class="text-4xl text-violet-500 font-bold md:text-5xl">BUSINESS</span>
+    <div class="bg-[#292828cb] h-[50vh] pt-2 mt-5 rounded-lg font-bold font-mono md:ms-10 md:w-[52vw] md:h-[52vh] xl:h-[60vh]">
+      <div class="grid w-80 h-10 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw]">Name</div>
+      <div class="grid w-80 h-10 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw]">Your@gmail.com</div>
+      <div class="grid w-80 h-24 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw] md:h-28">Message</div>
+      <div class="grid w-80 h-10 text-center rounded-lg bg-violet-500 text-white ms-3 mt-5 pt-2 hover:bg-green-500 md:w-[50vw]">Send</div>
+    </div>
+    </div>
+    </section>
+</section>
+</body>
+</html>
