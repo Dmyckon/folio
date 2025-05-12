@@ -26,3 +26,7 @@ function darkView() {
     document.getElementById("light").style.display = "block"
     document.getElementById("dark").style.display = "none"
 }
+
+function sendClick() {
+    
+}

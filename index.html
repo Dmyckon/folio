@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -67,6 +67,20 @@
         <span class="text-4xl text-violet-500 font-bold md:hidden">ACHIEVEMENTS</span>
         <h1 class="hidden md:block md:text-6xl md:text-violet-500 md:font-bold">ACHIEVEMENTS</h1>
         <div class="text-white md:grid grid-cols-2 md:ms-10">
+        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+          <div class="flex m-10 justify-between md:block md:m-5">
+            <img src="./techty.png" class="w-[30vw] rounded-2xl md:w-[50vw] md:h-[40vh] xl:h-[45vh]">
+            <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Techty Business page</h1>
+          </div>
+          <div class="flex justify-between ps-14 pe-14 font-bold font-mono md:ps-10 md:pe-10 md: xl:ps-14 xl:pe-14">
+            <div>
+              <a href="https://github.com/Dmyckon/Techty" class="text-gray-400"><i class="fa fa-github hover:text-violet-500"></i>View code</a>
+            </div>
+            <div>
+              <a href="https://techty.vercel.app" class="text-gray-400"><i class="fa fa-link"></i>View project</a>
+            </div>
+          </div>
+        </div>
         <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
           <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./desktop-preview loopstudios.jpg" class="w-[30vw] rounded-2xl md:w-[50vw] md:h-[40vh] xl:h-[45vh]">
@@ -221,20 +235,6 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
-            <div class="flex m-10 justify-between md:block md:m-5">
-            <img src="./alphabet .png" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
-            <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Learn Alphabets</h1>
-          </div>
-          <div class="flex justify-between ps-14 pe-14 font-bold font-mono md:ps-10 md:pe-10 xl:ps-14 xl:pe-14">  
-            <div>
-              <a href="https://github.com/Dmyckon/javalesson" class="text-gray-400"><i class="fa fa-github hover:text-violet-500"></i>View code</a>
-            </div>
-            <div>
-              <a href="https://alphabets-kappa.vercel.app" class="text-gray-400"><i class="fa fa-link"></i>View project</a>
-            </div>
-          </div>
-        </div>
       </div>
       </div>
       <div id="section3" class="text-center mt-8 p-4">
@@ -279,13 +279,13 @@
       <input placeholder="Name" class="grid w-80 h-10 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw]">
       <input placeholder="Your@gmail.com" class="grid w-80 h-10 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw]">
       <textarea placeholder="Message" class="grid w-80 h-24 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw] md:h-28"></textarea>
-      <div class="grid w-80 h-10 text-center rounded-lg bg-violet-500 text-white ms-3 mt-5 pt-2 hover:bg-green-500 md:w-[50vw]">Send</div>
+      <button onclick="sendClick()" class="grid w-80 h-10 text-center rounded-lg bg-violet-500 text-white ms-3 mt-5 pt-2 hover:bg-green-500 md:w-[50vw]">Send</button>
     </div>
     </div>
     </section>
 </section>
 
 
-<script src="./script.js"></script>
+   <script src="./script.js"></script>
 </body>
 </html>
