@@ -28,16 +28,29 @@
 </head>
 <body id="body" class="bg-black">
 
+  <style>
+    @keyframes slide-right {
+      from { transform: translateX(0); }
+      to   { transform: translateX(20px); }
+    }
+
+    @keyframes smallBounceOnce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  </style>
+
   
   <nav class="sticky top-5 md:static md:ms-[34%] md:mt-5">
-    <div class="justify-center flex hover:bg-violet-500 text-white bg-[#292828cb] w-[57vw] p-2 ms-20 mt-2 rounded-lg text-2xl md:w-[21vw] md:text-2xl md:justify-start md:ps-5 md:p-3 xl:w-[20vw]">
+    <div id="box" class="opacity-0 justify-center flex hover:bg-violet-500 text-white bg-[#292828cb] w-[57vw] p-2 ms-16 mt-2 rounded-lg text-2xl md:w-[21vw] md:text-2xl md:justify-start md:ps-5 md:p-3 xl:w-[20vw]">
       <ul><a href="#section1"><i class="fa fa-home transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out"></i></a></ul>
       <ul><a href="#section2"><i class="fa fa-folder ms-8 md:ms-10 transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out"></i></a></ul>
       <ul><a href="#section3"><i class="fa fa-wrench ms-8 md:ms-10 transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out"></i></a></ul>
       <ul><a href="#section4"><i class="fa fa-envelope ms-8 md:ms-10 transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out"></i></a></ul>
     </div>
   </nav>
-  <div class="sticky flex top-[80%] ml-[85%] md:ml-[95%] md:top-[20%]">
+  <div class="sticky flex top-[50%] ml-[85%] md:ml-[95%] md:top-[20%]">
     <img src="./icon-sun.svg" onclick="lightView()" id="light" class="bg-yellow-500 rounded-full w-10 p-2 transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
     <img src="./icon-moon.svg" onclick="darkView()" id="dark" class="bg-blue-500 p-2 w-10 rounded-full transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out hidden">
   </div>
@@ -47,7 +60,7 @@
       <img src="./michael.JPG" class="w-[60vw] h-[40vh] rounded-2xl ms-7 md:w-[22vw] md:h-[60vh]">
       <h1 class="text-3xl font-bold mt-5 md:text-5xl">Michael Olatunbosun</h1>
       <p class="text-lg mt-5 text-gray-500 font-bold md:text-2xl md:mt-10">Front End Web Developer</p>
-      <span class="flex justify-item-center ms-[27%] text-2xl mt-10 md:ms-[16%] md:p-8">
+      <span id="move" class="flex justify-item-center ms-[27%] text-2xl mt-10 md:ms-[16%] md:p-8">
         <ul><a href="https://www.instagram.com/dmyckon?igsh=ODJhN2pxdWZ4NXIz"><i class="fa fa-instagram hover:text-pink-800 transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out"></i></a></ul>
         <ul><a href="https://x.com/Dmyckon?t=xZMtG0ckhz3YYn5IThOX_g&s=09"><i class="fa fa-twitter ms-3 hover:text-blue-400 transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out md:ms-5"></i></a></ul>
         <ul><a href="mailto:olatunbosunmichaeld@gmail.com"><i class="fa fa-envelope ms-3 hover:text-red-900 transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out md:ms-5"></i></a></ul>
@@ -57,22 +70,22 @@
     </section>
     <section>
       <div class="text-center mt-8 p-4 md:ms-10">
-        <h1 id="one" class="text-5xl text-white font-bold font-mono md:text-7xl">FRONT END</h1>
-        <span class="text-violet-500 font-bold font-sans text-4xl md:hidden">WEB DEVELOPER</span>
-        <h1 class="hidden md:block md:text-violet-500 md:font-bold md:font-sans md:text-6xl">WEB DEVELOPER</h1>
-        <p id="note" class="text-lg text-gray-400 pt-5">I'm passionate to create functional and aesthetically pleasing Web Applications which engage user experiences. I've always been eager to learn and would love to work in an environment where there is a collaborative effort for career and organization growth. In other word, I specialize in transmiting ideas into beautiful crafted products/masterpiece</p>
+        <h1 id="one" class="scroll-div opacity-0 -translate-y-24 transition-all duration-700 ease-out text-4xl text-white font-bold font-mono md:text-6xl">FRONT END</h1>
+        <span class="scroll-div opacity-0 -translate-y-24 transition-all duration-700 ease-out text-violet-500 font-bold font-sans text-4xl md:hidden">WEB DEVELOPER</span>
+        <span class="scroll-div opacity-0 -translate-y-24 transition-all duration-700 ease-out hidden md:block md:text-violet-500 md:font-bold md:font-sans md:text-6xl">WEB DEVELOPER</span>
+        <p id="note" class="scroll-up opacity-0 translate-y-10 transition-all duration-1000 ease-out text-lg text-gray-400 pt-5">I'm passionate to create functional and aesthetically pleasing Web Applications which engage user experiences. I've always been eager to learn and would love to work in an environment where there is a collaborative effort for career and organization growth. In other word, I specialize in transmiting ideas into beautiful crafted products/masterpiece</p>
       </div>
       <div id="section2" class="text-center mt-8 md:mt-16">
         <span id="two" class="text-white text-4xl font-bold font-mono md:text-6xl">PROJECTS AND</span>
-        <span class="text-4xl text-violet-500 font-bold md:hidden">ACHIEVEMENTS</span>
-        <h1 class="hidden md:block md:text-6xl md:text-violet-500 md:font-bold">ACHIEVEMENTS</h1>
+        <span class="scroll-div opacity-0 -translate-y-24 transition-all duration-700 ease-out text-4xl text-violet-500 font-bold md:hidden">ACHIEVEMENTS</span>
+        <h1 class="scroll-div opacity-0 -translate-y-24 transition-all duration-700 ease-out hidden md:block md:text-6xl md:text-violet-500 md:font-bold">ACHIEVEMENTS</h1>
         <div class="text-white md:grid grid-cols-2 md:ms-10">
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out hover:bg-gray-800 grid rounded-3xl">
           <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./techty.png" class="w-[30vw] rounded-2xl md:w-[50vw] md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Techty Business page</h1>
           </div>
-          <div class="flex justify-between ps-14 pe-14 font-bold font-mono md:ps-10 md:pe-10 md: xl:ps-14 xl:pe-14">
+          <div class="flex justify-between ps-14 pe-14 font-bold font-mono md:ps-10 md:pe-10 xl:ps-14 xl:pe-14">
             <div>
               <a href="https://github.com/Dmyckon/Techty" class="text-gray-400"><i class="fa fa-github hover:text-violet-500"></i>View code</a>
             </div>
@@ -81,7 +94,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out hover:bg-gray-800 grid rounded-3xl">
           <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./desktop-preview loopstudios.jpg" class="w-[30vw] rounded-2xl md:w-[50vw] md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Loopstudios landing page</h1>
@@ -95,7 +108,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out hover:bg-gray-800 grid rounded-3xl">
           <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./desktop-preview blogr.jpg" class="w-[30vw] h-[15vh] rounded-2xl md:w-[50vw] md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Blogr landing page</h1>
@@ -109,7 +122,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out hover:bg-gray-800 grid rounded-3xl">
           <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./desktop-design easy.jpg" class="w-[30vw] h-[15vh] rounded-2xl md:w-[50vw] md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Easybank page</h1>
@@ -123,7 +136,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out hover:bg-gray-800 grid rounded-3xl">
           <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./desktop-preview 2.jpg" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Sunnyside page</h1>
@@ -137,7 +150,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out hover:bg-gray-800 grid rounded-3xl">
             <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./desktop-preview.jpg" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Insure landing page</h1>
@@ -151,7 +164,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out hover:bg-gray-800 grid rounded-3xl">
             <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./accordion-preview.jpg" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Accordion page</h1>
@@ -165,7 +178,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out hover:bg-gray-800 grid rounded-3xl">
             <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./calculator-desktop.png" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Scientific Calculator</h1>
@@ -179,7 +192,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out hover:bg-gray-800 grid rounded-3xl">
             <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./gradingsystem-desktop.png" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Grading system</h1>
@@ -193,7 +206,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out hover:bg-gray-800 grid rounded-3xl">
             <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./tictactoe.png" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Tic-Tac-Toe Game</h1>
@@ -207,7 +220,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-20 transition-all duration-[1500ms] ease-in-out rounded-3xl">
             <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./todo-preview.jpg" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">To-do Application</h1>
@@ -221,7 +234,7 @@
             </div>
           </div>
         </div>
-        <div class="hover:bg-gray-800 grid rounded-3xl transform transition hover:-translate-y-1 delay-150 duration-300 ease-in-out">
+        <div class="scroll-slide opacity-0 translate-x-40 transition-all duration-[1500ms] ease-in-out grid rounded-3xl">
             <div class="flex m-10 justify-between md:block md:m-5">
             <img src="./slidermaster-preview.jpg" class="w-[30vw] h-[15vh] rounded-2xl md:h-[40vh] xl:h-[45vh]">
             <h1 class="font-bold text-2xl text-gray-400 ms-5 mt-3 md:text-3xl">Slider master page</h1>
@@ -239,46 +252,46 @@
       </div>
       <div id="section3" class="text-center mt-8 p-4">
         <span id="three" class="text-white text-4xl font-bold font-mono md:text-6xl">ESSENTIAL TOOLS</span>
-        <span class="text-4xl text-violet-500 font-bold md:hidden">AND SKILLS</span>
-        <h1 class="hidden md:block md:text-6xl md:text-violet-500 md:font-bold">AND SKILLS</h1>
+        <span class="scroll-div opacity-0 -translate-y-24 transition-all duration-700 ease-out text-4xl text-violet-500 font-bold md:hidden">AND SKILLS</span>
+        <h1 class="scroll-div opacity-0 -translate-y-24 transition-all duration-700 ease-out hidden md:block md:text-6xl md:text-violet-500 md:font-bold">AND SKILLS</h1>
         <div class="text-white grid grid-cols-2 m-4 justify-item-center md:grid-cols-3 md:m-20">
-          <div class="transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
+          <div class="scroll-up opacity-0 translate-y-10 transition-all duration-700 ease-out transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
             <img src="./html-5.png" class="bg-white rounded-3xl w-[30vw] m-3 md:m-4 md:w-[65%]">
             <h1 class="text-gray-400 text-xl font-bold font-mono md:mr-5">HTML</h1>
           </div>
-          <div class="transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
+          <div class="scroll-up opacity-0 translate-y-10 transition-all duration-700 ease-out transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
             <img src="./css-3 (1).png" class="bg-white rounded-3xl w-[30vw] m-3 md:m-4 md:w-[65%]">
             <h1 class="text-gray-400 text-xl font-bold font-mono md:mr-5">CSS</h1>
           </div>
-          <div class="transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
+          <div class="scroll-up opacity-0 translate-y-10 transition-all duration-700 ease-out transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
             <img src="./js.png" class="bg-white rounded-3xl w-[30vw]  m-3 md:m-4 md:w-[65%]">
             <h1 class="text-gray-400 text-xl font-bold font-mono md:mr-5">JAVASCRIPT</h1>
           </div>
-          <div class="transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
+          <div class="scroll-up opacity-0 translate-y-10 transition-all duration-700 ease-out transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
             <img src="./tailwind-css.svg" class="rounded-3xl w-[30vw] bg-white m-3 mt-10 md:m-4 md:w-[65%] md:mt-10">
             <h1 class="text-gray-400 text-xl font-bold font-mono mt-7 md:mt-12 md:mr-5">TAILWIND</h1>
           </div>
-          <div class="transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
+          <div class="scroll-up opacity-0 translate-y-10 transition-all duration-700 ease-out transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
             <img src="./bootstrap.png" class="bg-white rounded-3xl w-[30vw]  m-3 md:m-4 md:w-[65%]">
             <h1 class="text-gray-400 text-xl font-bold font-mono md:mr-5">BOOTSTRAP</h1>
           </div>
-          <div class="transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
+          <div class="scroll-up opacity-0 translate-y-10 transition-all duration-700 ease-out transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
             <img src="./react.png" class="rounded-3xl w-[30vw]  m-3 md:m-4 md:w-[65%]">
             <h1 class="text-gray-400 text-xl font-bold font-mono md:mr-5">REACT</h1>
           </div>
-          <div class="transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
+          <div class="scroll-up opacity-0 translate-y-10 transition-all duration-700 ease-out transform transition hover:-translate-y-1 delay-50 duration-300 ease-in-out">
             <img src="./github.png" class="rounded-3xl w-[30vw]  m-3 md:m-4 md:w-[65%]">
             <h1 class="text-gray-400 text-xl font-bold font-mono md:mr-5">GIT</h1>
           </div>
         </div>
       </div>
     <div id="section4" class="text-center mt-3 p-4">
-      <h1 id="four" class="text-white text-4xl font-bold font-mono md:text-5xl">LET'S TALK</h1>
+      <h1 id="four" class="scroll-div opacity-0 -translate-y-24 transition-all duration-700 ease-out text-white text-4xl font-bold font-mono md:text-5xl">LET'S TALK</h1>
       <span class="text-4xl text-violet-500 font-bold md:text-5xl">BUSINESS</span>
-    <div class="bg-[#292828cb] h-[50vh] pt-2 mt-5 rounded-lg font-bold font-mono md:ms-10 md:w-[52vw] md:h-[52vh] xl:h-[60vh]">
-      <input placeholder="Name" class="grid w-80 h-10 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw]">
-      <input placeholder="Your@gmail.com" class="grid w-80 h-10 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw]">
-      <textarea placeholder="Message" class="grid w-80 h-24 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw] md:h-28"></textarea>
+    <div class="scroll-up opacity-0 translate-y-10 transition-all duration-700 ease-out bg-[#292828cb] h-[50vh] pt-2 mt-5 rounded-lg font-bold font-mono md:ms-10 md:w-[52vw] md:h-[52vh] xl:h-[60vh]">
+      <input id="name" placeholder="Name" class="grid w-80 h-10 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw]">
+      <input id="email" placeholder="Your@gmail.com" class="grid w-80 h-10 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw]">
+      <textarea id="message" placeholder="Message" class="grid w-80 h-24 text-start text-gray-500 rounded-lg bg-white ms-3 mt-5 md:w-[50vw] md:h-28"></textarea>
       <button onclick="sendClick()" class="grid w-80 h-10 text-center rounded-lg bg-violet-500 text-white ms-3 mt-5 pt-2 hover:bg-green-500 md:w-[50vw]">Send</button>
     </div>
     </div>
