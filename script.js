@@ -74,16 +74,16 @@ elements.forEach(el => observer.observe(el));
     if (!isVisible(move)) return;
 
     // reset animation
-    move.classList.remove("[animation:smallBounceOnce_0.6s_ease-out_forwards]");
+    move.classList.remove("[animation:smallBounceOnce_0.4s_ease-out_forwards]");
     
     // force browser to notice the change
     void move.offsetWidth;
     
     // add animation class again
-    move.classList.add("[animation:smallBounceOnce_0.6s_ease-out_forwards]");
+    move.classList.add("[animation:smallBounceOnce_0.4s_ease-out_forwards]");
   }
   // run on scroll and on page load
-  window.addEventListener("scroll", bounce);
+  //window.addEventListener("scroll", bounce);
   window.addEventListener("load", bounce);
 
 
